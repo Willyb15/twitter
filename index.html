@@ -24,13 +24,27 @@
 						<img src="img/throne.jpg" alt="">
 						<img src="img/yeezus.png" alt="">
 						<img src="img/pablo.jpg" alt="">
-						@KanyeWest - "Greatest Rock Star on the Planet"
-						<form ng-submit="submit()">
-							<input id="search-field" class="search" type="text" ng-model="text" name="text" />
-							<input class="search button btn btn-danger" type="submit" id="submit" value="Submit" />
-						</form> 
 					</div>
 				</div>
+				<div class="row">
+					<div class="col-sm-12 text-row text-center">
+						"Greatest Rock Star on The Planet"<br> 
+						@KanyeWest in Twittosphere.
+					</div>
+				</div>
+						
+					<div class="row search-row">
+						<div class="col-sm-6 col-sm-offset-3 search-col">
+
+							<form ng-submit="submit()">
+								Search Twitter!
+								<input id="search-field" class="search" type="text" ng-model="text" name="text" />
+								<input class="search button btn btn-danger" type="submit" id="submit" value="Get Tweets!" />
+							</form>
+						</div>
+					</div> 
+				
+				
 			</div>
 		</div>
 
@@ -51,7 +65,7 @@
 				</div>
 				<div class="row">
 					<div class="col-sm-6  col-sm-offset-3 banner_url">
-						<img class="banner_url" ng-src="{{tweet.user.profile_banner_url}}">
+						<img class="banner_url" ng-src="{{tweet.user.profile_banner_url}}"><br>
 						<img class="retweet" src="img/retweet.png"> {{tweet.retweet_count}}
 					</div>
 
