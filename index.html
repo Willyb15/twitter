@@ -3,15 +3,60 @@
 <head>
 	<title></title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="styles.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
-	<script type="text/javascript" src="controller.js"></script>
+	<script type="text/javascript" src="js/angular-route.min.js"></script>
+	<script type="text/javascript" src="js/mainController.js"></script>
 
 </head>
-<body ng-controller="twitterController">
+<body ng-controller="mainController">
 
 	<div class="container">
-		<div class="col-sm-3 tweetData" ng-repeat="text in tweetData track by $index">
-				{{tweetData.text}}
+		<div class="row">
+			<div class="col-sm-12 global-nav">
+				<div class="row">
+					<div class="col-sm-12 nav-img">
+						<img src="img/collegedropout.jpg" alt="">
+						<img src="img/graduation.jpg" alt="">
+						<img src="img/late-registration.jpg" alt="">
+						<img src="img/heartbreak.jpg" alt="">
+						<img src="img/fantasy.jpg" alt="">
+						<img src="img/throne.jpg" alt="">
+						<img src="img/yeezus.png" alt="">
+						<img src="img/pablo.jpg" alt="">
+						@KanyeWest - "Greatest Rock Star on the Planet"
+						<form ng-submit="submit()">
+							<input id="search-field" class="search" type="text" ng-model="text" name="text" />
+							<input class="search button btn btn-danger" type="submit" id="submit" value="Submit" />
+						</form> 
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-sm-8 col-sm-offset-2 content" ng-repeat="tweet in data">
+				<div class="row">
+					<div class"user">
+						<img class="col-sm-12 twitter-user" ng-src="{{tweet.user.profile_image_url}}">
+						{{tweet.user.name}}	@ {{tweet.user.screen_name}} - {{tweet.sinceTweeted}} seconds ago
+						<span class="followers">Followers: {{tweet.user.followers_count}}</span>
+					
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-12 twitter-content">
+						{{tweet.text}}--
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-6  col-sm-offset-3 banner_url">
+						<img class="banner_url" ng-src="{{tweet.user.profile_banner_url}}">
+						<img class="retweet" src="img/retweet.png"> {{tweet.retweet_count}}
+					</div>
+
+				</div>
+			</div>				
 		</div>
 
 	</div>
