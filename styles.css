@@ -1,4 +1,21 @@
 
+body{
+		background-image: url("img/pattern.jpg");
+
+}
+.global-nav {
+	background-image: url("img/darkCarbon.jpg");
+    border-bottom: 1px solid rgba(0,0,0,0.15);
+    height: 170px;
+    position: relative;
+    background-color: black;
+    min-width: 974px;
+    max-width: 974px;
+    margin:0 auto;
+    color:white;
+    font-size: 16px;
+	font-weight: 800;
+}
 
 
 .nav-img img{
