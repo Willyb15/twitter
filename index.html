@@ -13,7 +13,7 @@
 
 	<div class="container">
 		<div class="row">
-			<div class="col-sm-12 global-nav">
+			<div class="col-sm-8 col-sm-offset-2 global-nav">
 				<div class="row">
 					<div class="col-sm-12 nav-img">
 						<img src="img/collegedropout.jpg" alt="">
@@ -27,46 +27,41 @@
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-sm-12 text-row text-center">
-						"Greatest Rock Star on The Planet"<br> 
-						@KanyeWest in Twittosphere.
+					<div class="col-sm-10 col-sm-offset-1 text-row text-center">
+						"The Greatest Rock Star on The Planet"<br> 
+						@KanyeWest trending in Twittosphere.
 					</div>
 				</div>
 						
-					<div class="row search-row">
-						<div class="col-sm-6 col-sm-offset-3 search-col">
-
-							<form ng-submit="submit()">
-								Search Twitter!
-								<input id="search-field" class="search" type="text" ng-model="text" name="text" />
-								<input class="search button btn btn-danger" type="submit" id="submit" value="Get Tweets!" />
-							</form>
-						</div>
-					</div> 
-				
-				
 			</div>
 		</div>
-
+		<div class="row search-row">
+			<div class="col-sm-4 col-sm-offset-4 search-col">
+				<form ng-submit="submit()">
+					<input id="search-field" class="search" type="text" ng-model="text" name="text" />
+					<input class="search button btn btn-default" type="submit" id="submit" value="Search Tweets!" />
+				</form>
+			</div>
+		</div> 
 		<div class="row">
 			<div class="col-sm-8 col-sm-offset-2 content" ng-repeat="tweet in data">
 				<div class="row">
-					<div class"user">
-						<img class="col-sm-12 twitter-user" ng-src="{{tweet.user.profile_image_url}}">
-						{{tweet.user.name}}	@ {{tweet.user.screen_name}} - {{tweet.sinceTweeted}} seconds ago
+					<div class="user">
+						<img class="col-sm-12 twitter-user" ng-src="{{tweet.user.profile_background_image_url}}">
+						<span class="user-info">{{tweet.user.name}}	@{{tweet.user.screen_name}}</span>
 						<span class="followers">Followers: {{tweet.user.followers_count}}</span>
-					
+						<img class="retweet" src="img/retweet.png"> {{tweet.retweet_count}}<br>
+						<span class="tweet-seconds"> {{tweet.sinceTweeted}} seconds ago </span>
 					</div>
 				</div>
 				<div class="row">
 					<div class="col-sm-12 twitter-content">
-						{{tweet.text}}--
+						{{tweet.text}}
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-sm-6  col-sm-offset-3 banner_url">
-						<img class="banner_url" ng-src="{{tweet.user.profile_banner_url}}"><br>
-						<img class="retweet" src="img/retweet.png"> {{tweet.retweet_count}}
+					<div class="col-sm-8 col-sm-offset-2 banner_url">
+						<img class="banner_url" ng-src="{{tweet.user.profile_banner_url}}">
 					</div>
 
 				</div>

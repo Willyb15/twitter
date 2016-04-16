@@ -1,13 +1,16 @@
 
 body{
-	background-image: url("img/background.png");
+		background-image: url("img/pattern.jpg");
+
 }
 .global-nav {
+	background-image: url("img/darkCarbon.jpg");
     border-bottom: 1px solid rgba(0,0,0,0.15);
-    height: 200px;
+    height: 170px;
     position: relative;
     background-color: black;
-    min-width: 980px;
+    min-width: 974px;
+    max-width: 974px;
     margin:0 auto;
     color:white;
     font-size: 16px;
@@ -21,51 +24,69 @@ body{
 	margin:0px 2px;
 }
 .text-row{
-margin-top: 10px;
+	margin-top: 10px;
 }
 
 .search-row{
+	margin-top:5px;
 	padding:0px;
-	background-color:#990099;
 	min-width: 980px;
-	margin-top:10px;
 	font-style:italic;
-
+	border-radius: 5px;
 }
 
 input{
 	color:black;
+
 }
+
+.btn-default{
+	padding: 3px;
+} 
+
 .content{
-	height:275px;
+	height:250px;
 	float:none;
-	margin:15px auto;
-	min-width:640px;
-	font-size: 16px;
+	margin:25px auto;
+	min-width:520px;
+	max-width:520px;
+	font-size: 14px;
     line-height: 28px;
     font-weight: 400;
-	border: 5px solid black;
+	border: 5px inset grey;
 	background-color: white;
-	box-sizing: border-box
+	box-sizing: border-box;
+	overflow:hidden;
 }
 
 .followers{
 	float:right;
 	color:blue;
 }
+.user{
+	margin-left: 2px;
+}
 .twitter-user{
 	box-sizing: border-box;
+	margin-left: 3px;
+    margin-top: 3px;
 }
-
+.user-info{
+	margin-left: 2px;
+}
+.tweet-seconds{
+	margin-left: 2px;
+}
 
 img.twitter-user{
 	width:70px;
 	height:70px;
 	padding:0px;
-	border:1px sloid black;
+	border:.5px groove grey;
 }
 
 img.banner_url{
+	border: 1px inset black;
 	width:285px;
 	height:100px;
 	opacity: 1;

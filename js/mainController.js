@@ -1,7 +1,9 @@
 var twitterApp = angular.module('twitterApp', ['ngRoute']);
 twitterApp.controller('mainController', function($scope, $http, $routeParams, $interval){
 	$scope.message = "Hello World";
-	var twitterURL = 'http://www.digitalcrafts.com/students/twitter/hashtag.php?hash=kanyewest';
+	var twitterURL = 'http://digitalcrafts.com/students/twitter/hashtag.php?user=true&hash=kanyewest'; 	
+	// http://digitalcrafts.com/students/twitter/hashtag.php?user=true&hash=realdonaldtrump url for user
+	// 'http://www.digitalcrafts.com/students/twitter/hashtag.php?hash=kanyewest';	url for trending
 				
 	$http.get(twitterURL).success(function(data){
 		console.log(data);
